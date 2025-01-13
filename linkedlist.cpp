@@ -264,60 +264,60 @@ bool linkedlist::trungSo(int x)
     return true;
 }
 
-// Liệt kê siêu thị có số lượng nhân viên từ 30 đến 50
-void nhanVien()
-{
-    element *temp = head;
-    while (temp)
-    {
-        if (temp->getSl() >= 30 && temp->getSl() <= 50)
-        {
-            cout << "- " << temp->getName() << endl;
-        }
-        temp = temp->getPointer();
-    }
-}
+// // Liệt kê siêu thị có số lượng nhân viên từ 30 đến 50
+// void nhanVien()
+// {
+//     element *temp = head;
+//     while (temp)
+//     {
+//         if (temp->getSl() >= 30 && temp->getSl() <= 50)
+//         {
+//             cout << "- " << temp->getName() << endl;
+//         }
+//         temp = temp->getPointer();
+//     }
+// }
 
-// Xóa siêu thị có doanh thu < 1 tỷ và đã hoạt động trên 5 năm
-void xoa(int nam)
-{
-    element *temp = head;
-    element *prev = nullptr;
-    while (temp)
-    {
-        if ((nam - temp->getNamThanhLap() > 5) && temp->getDT() < 1000)
-        {
-            if (prev)
-            {
-                prev->setPointer(temp->getPointer());
-            }
-            else
-            {
-                head = temp->getPointer();
-            }
-            delete temp;
-            temp = (prev) ? prev->getPointer() : head;
-            count--;
-        }
-        else
-        {
-            prev = temp;
-            temp = temp->getPointer();
-        }
-    }
-}
+// // Xóa siêu thị có doanh thu < 1 tỷ và đã hoạt động trên 5 năm
+// void xoa(int nam)
+// {
+//     element *temp = head;
+//     element *prev = nullptr;
+//     while (temp)
+//     {
+//         if ((nam - temp->getNamThanhLap() > 5) && temp->getDT() < 1000)
+//         {
+//             if (prev)
+//             {
+//                 prev->setPointer(temp->getPointer());
+//             }
+//             else
+//             {
+//                 head = temp->getPointer();
+//             }
+//             delete temp;
+//             temp = (prev) ? prev->getPointer() : head;
+//             count--;
+//         }
+//         else
+//         {
+//             prev = temp;
+//             temp = temp->getPointer();
+//         }
+//     }
+// }
 
-void danhMuc()
-{
-    element *temp = head;
-    while (temp)
-    {
-        auto categories = temp->getSP();
-        if (find(categories.begin(), categories.end(), "Thực phẩm") != categories.end() &&
-            find(categories.begin(), categories.end(), "Đồ gia dụng") != categories.end())
-        {
-            cout << "- " << temp->getName() << endl;
-        }
-        temp = temp->getPointer();
-    }
-}
+// void danhMuc()
+// {
+//     element *temp = head;
+//     while (temp)
+//     {
+//         auto categories = temp->getSP();
+//         if (find(categories.begin(), categories.end(), "Thực phẩm") != categories.end() &&
+//             find(categories.begin(), categories.end(), "Đồ gia dụng") != categories.end())
+//         {
+//             cout << "- " << temp->getName() << endl;
+//         }
+//         temp = temp->getPointer();
+//     }
+// }
